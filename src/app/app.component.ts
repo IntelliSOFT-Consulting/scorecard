@@ -10,14 +10,14 @@ import {HttpClient} from '@angular/common/http';
 export class AppComponent {
   constructor (private translate: TranslateService, private http: HttpClient) {
     http.get('manifest.webapp').subscribe((data: any) => {
-      translate.setDefaultLang('en');
+      translate.setDefaultLang('fr');
       if (data.hasOwnProperty('language')) {
         translate.setDefaultLang(data.language);
       }else {
-        translate.setDefaultLang('en');
+        translate.setDefaultLang('fr');
       }
     });
-  }
+  }b
 
 
 }
